@@ -45,7 +45,14 @@
                 }
             },
             "method": "post",
-            "url": "https://login.microsoftonline.com/ded37aec-f25a-4e2a-ae11-ba771b34712c/oauth2/v2.0/token"
+            "url": "https://login.microsoftonline.com/[tenantlogin]/oauth2/v2.0/token",
+            "url_params": {
+                "AAq": {
+                    "key": "tenantlogin",
+                    "private": true,
+                    "value": "ded37aec-f25a-4e2a-ae11-ba771b34712c"
+                }
+            }
         }
     },
     "generate_token_from_code_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
