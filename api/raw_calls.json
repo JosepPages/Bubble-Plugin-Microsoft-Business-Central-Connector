@@ -1,24 +1,167 @@
 {
     "add_to_header": true,
-    "auth": "oauth2_custom",
+    "auth": "none",
     "calls": {
         "AAL": {
+            "headers": {
+                "AAy": {
+                    "doc": "Type Bearer (with a space at the end) followed by the Access_Token obtained from the Get Auth Token call",
+                    "key": "Authorization",
+                    "private": true
+                },
+                "ABP": {
+                    "doc": "Set a different value on each call to force Bubble not to read from the cache",
+                    "key": "DateTimeForRefresh",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
             "initialized": true,
             "method": "get",
-            "name": "GetCompanies",
+            "name": "Get Companies",
             "publish_as": "data",
-            "rank": 0,
+            "rank": 2,
             "ret_value": "api.1727941107544x715465314016952300.plugin_api.AAL",
-            "should_reinitialize": false,
-            "types": "{\"plugin_api.AAL\":{\"caption\":\"GetCompanie\",\"fields\":{\"_p_@odata__dot__context\":{\"ret_btype\":\"text\",\"caption\":\"@odata.context\",\"sample_value\":\"https://api.businesscentral.dynamics.com/v2.0/Sandbox25/api/v2.0/$metadata#companies\",\"path\":[\"@odata.context\"]},\"_p_value\":{\"ret_btype\":\"list.api.1727941107544x715465314016952300.plugin_api.AAL.value\",\"caption\":\"value\",\"path\":[\"value\"]}}},\"plugin_api.AAL.value\":{\"caption\":\"GetCompanies value\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"0629664e-9b69-ef11-a677-6045bde984b0\",\"path\":[\"id\"]},\"_p_systemVersion\":{\"ret_btype\":\"text\",\"caption\":\"systemVersion\",\"sample_value\":\"25.0.23364.23635\",\"path\":[\"systemVersion\"]},\"_p_timestamp\":{\"ret_btype\":\"number\",\"caption\":\"timestamp\",\"sample_value\":4613,\"path\":[\"timestamp\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"CRONUS USA, Inc.\",\"path\":[\"name\"]},\"_p_displayName\":{\"ret_btype\":\"text\",\"caption\":\"displayName\",\"sample_value\":\"\",\"path\":[\"displayName\"]},\"_p_businessProfileId\":{\"ret_btype\":\"text\",\"caption\":\"businessProfileId\",\"sample_value\":\"\",\"path\":[\"businessProfileId\"]},\"_p_systemCreatedAt\":{\"ret_btype\":\"date_unix\",\"caption\":\"systemCreatedAt\",\"sample_value\":\"2024-09-03T02:22:04.51Z\",\"path\":[\"systemCreatedAt\"]},\"_p_systemCreatedBy\":{\"ret_btype\":\"text\",\"caption\":\"systemCreatedBy\",\"sample_value\":\"00000000-0000-0000-0000-000000000001\",\"path\":[\"systemCreatedBy\"]},\"_p_systemModifiedAt\":{\"ret_btype\":\"date_unix\",\"caption\":\"systemModifiedAt\",\"sample_value\":\"2024-09-03T02:22:04.51Z\",\"path\":[\"systemModifiedAt\"]},\"_p_systemModifiedBy\":{\"ret_btype\":\"text\",\"caption\":\"systemModifiedBy\",\"sample_value\":\"00000000-0000-0000-0000-000000000001\",\"path\":[\"systemModifiedBy\"]}}}}",
-            "url": "https://api.businesscentral.dynamics.com/v2.0/[environment]/api/v2.0/companies",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAL\":{\"caption\":\"Get Companie\",\"fields\":{\"_p_body.@odata__dot__context\":{\"ret_btype\":\"text\",\"caption\":\"body @odata.context\",\"sample_value\":\"https://api.businesscentral.dynamics.com/v2.0/Sandbox25/api/v2.0/$metadata#companies\",\"path\":[\"body\",\"@odata.context\"]},\"_p_body.value\":{\"ret_btype\":\"list.api.1727941107544x715465314016952300.plugin_api.AAL.body.value\",\"caption\":\"body value\",\"path\":[\"body\",\"value\"]},\"_p_error.status_code\":{\"ret_btype\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_btype\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_btype\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"@odata.context\\\\\\\":\\\\\\\"https://api.businesscentral.dynamics.com/v2.0/Sandbox25/api/v2.0/$metadata#companies\\\\\\\",\\\\\\\"value\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"0629664e-9b69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"systemVersion\\\\\\\":\\\\\\\"25.0.23364.23635\\\\\\\",\\\\\\\"timestamp\\\\\\\":4613,\\\\\\\"name\\\\\\\":\\\\\\\"CRONUS USA, Inc.\\\\\\\",\\\\\\\"displayName\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"businessProfileId\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"systemCreatedAt\\\\\\\":\\\\\\\"2024-09-03T02:22:04.51Z\\\\\\\",\\\\\\\"systemCreatedBy\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000001\\\\\\\",\\\\\\\"systemModifiedAt\\\\\\\":\\\\\\\"2024-09-03T02:22:04.51Z\\\\\\\",\\\\\\\"systemModifiedBy\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000001\\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"4fe59a59-9b69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"systemVersion\\\\\\\":\\\\\\\"25.0.23364.23635\\\\\\\",\\\\\\\"timestamp\\\\\\\":4614,\\\\\\\"name\\\\\\\":\\\\\\\"My Company\\\\\\\",\\\\\\\"displayName\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"businessProfileId\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"systemCreatedAt\\\\\\\":\\\\\\\"2024-09-03T02:22:23.123Z\\\\\\\",\\\\\\\"systemCreatedBy\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000001\\\\\\\",\\\\\\\"systemModifiedAt\\\\\\\":\\\\\\\"2024-09-03T02:22:23.123Z\\\\\\\",\\\\\\\"systemModifiedBy\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000001\\\\\\\"}]}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_btype\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}},\"plugin_api.AAL.body.value\":{\"caption\":\"Get Companies body value\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"0629664e-9b69-ef11-a677-6045bde984b0\",\"path\":[\"id\"]},\"_p_systemVersion\":{\"ret_btype\":\"text\",\"caption\":\"systemVersion\",\"sample_value\":\"25.0.23364.23635\",\"path\":[\"systemVersion\"]},\"_p_timestamp\":{\"ret_btype\":\"number\",\"caption\":\"timestamp\",\"sample_value\":4613,\"path\":[\"timestamp\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"CRONUS USA, Inc.\",\"path\":[\"name\"]},\"_p_displayName\":{\"ret_btype\":\"text\",\"caption\":\"displayName\",\"sample_value\":\"\",\"path\":[\"displayName\"]},\"_p_businessProfileId\":{\"ret_btype\":\"text\",\"caption\":\"businessProfileId\",\"sample_value\":\"\",\"path\":[\"businessProfileId\"]},\"_p_systemCreatedAt\":{\"ret_btype\":\"text\",\"caption\":\"systemCreatedAt\",\"sample_value\":\"2024-09-03T02:22:04.51Z\",\"path\":[\"systemCreatedAt\"]},\"_p_systemCreatedBy\":{\"ret_btype\":\"text\",\"caption\":\"systemCreatedBy\",\"sample_value\":\"00000000-0000-0000-0000-000000000001\",\"path\":[\"systemCreatedBy\"]},\"_p_systemModifiedAt\":{\"ret_btype\":\"text\",\"caption\":\"systemModifiedAt\",\"sample_value\":\"2024-09-03T02:22:04.51Z\",\"path\":[\"systemModifiedAt\"]},\"_p_systemModifiedBy\":{\"ret_btype\":\"text\",\"caption\":\"systemModifiedBy\",\"sample_value\":\"00000000-0000-0000-0000-000000000001\",\"path\":[\"systemModifiedBy\"]}}}}",
+            "url": "https://api.businesscentral.dynamics.com/v2.0/[Environment]/api/v2.0/companies",
             "url_params": {
-                "AAq": {
-                    "key": "environment",
+                "AAx": {
+                    "doc": "Enter the name of the environment, typically Production or Sandbox",
+                    "key": "Environment",
                     "private": true,
-                    "value": "Sandbox25"
+                    "value": "Sandbox"
                 }
-            }
+            },
+            "wrap_error": true
+        },
+        "AAz": {
+            "body": "grant_type=client_credentials\n&client_id=_*_ClientID_*_\n&client_secret=_*_ClientSecret_*_\n&scope=https://api.businesscentral.dynamics.com/.default",
+            "body_params": {
+                "ABC": {
+                    "doc": "Enter the client or application ID that you created in Azure Portal and registered in Business Central previously",
+                    "key": "ClientID",
+                    "private": true,
+                    "visibility": "secret"
+                },
+                "ABD": {
+                    "doc": "Enter the client secret ID that you created in Azure portal and registered in Business Central previously",
+                    "key": "ClientSecret",
+                    "private": true,
+                    "visibility": "secret"
+                }
+            },
+            "body_type": "plain_text",
+            "headers": {
+                "ABB": {
+                    "key": "Content-type",
+                    "private": true,
+                    "value": "application/x-www-form-urlencoded",
+                    "visibility": "hidden"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Get Auth Token (Data)",
+            "publish_as": "data",
+            "rank": 1,
+            "ret_value": "api.1727941107544x715465314016952300.plugin_api.AAz",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAz\":{\"caption\":\"Get Auth Token (Mandatory)\",\"fields\":{\"_p_body.token_type\":{\"ret_btype\":\"text\",\"caption\":\"body token_type\",\"sample_value\":\"Bearer\",\"path\":[\"body\",\"token_type\"]},\"_p_body.expires_in\":{\"ret_btype\":\"number\",\"caption\":\"body expires_in\",\"sample_value\":3599,\"path\":[\"body\",\"expires_in\"]},\"_p_body.ext_expires_in\":{\"ret_btype\":\"number\",\"caption\":\"body ext_expires_in\",\"sample_value\":3599,\"path\":[\"body\",\"ext_expires_in\"]},\"_p_body.access_token\":{\"ret_btype\":\"text\",\"caption\":\"body access_token\",\"sample_value\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyIsImtpZCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyJ9.eyJhdWQiOiJodHRwczovL2FwaS5idXNpbmVzc2NlbnRyYWwuZHluYW1pY3MuY29tIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjLyIsImlhdCI6MTcyNzk1MDA4MCwibmJmIjoxNzI3OTUwMDgwLCJleHAiOjE3Mjc5NTM5ODAsImFpbyI6ImsyQmdZSmk2UCsxQnVYUnIycmsxa250NHY4VStCUUE9IiwiYXBwaWQiOiJmNzJlZGQzZi0zMDAwLTRlM2QtOTBjZS00NGZlZDZmNjliMWQiLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kZWQzN2FlYy1mMjVhLTRlMmEtYWUxMS1iYTc3MWIzNDcxMmMvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiJlYzI5NjdiNS0xYWM1LTQ4MDktOTJkNy0wMDJlYTBiZTYxZWMiLCJyaCI6IjAuQVJFQTdIclQzbHJ5S2s2dUVicDNHelJ4TEQzdmJabHNzMU5CaGdlbV9Ud0J1SjhYQVFBLiIsInJvbGVzIjpbIkF1dG9tYXRpb24uUmVhZFdyaXRlLkFsbCIsImFwcF9hY2Nlc3MiLCJBZG1pbkNlbnRlci5SZWFkV3JpdGUuQWxsIiwiQVBJLlJlYWRXcml0ZS5BbGwiXSwic3ViIjoiZWMyOTY3YjUtMWFjNS00ODA5LTkyZDctMDAyZWEwYmU2MWVjIiwidGlkIjoiZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjIiwidXRpIjoiWVpXRWhIVTNZMFdxSGk4dEppdEhBQSIsInZlciI6IjEuMCIsInhtc19pZHJlbCI6IjYgNyJ9.ZR_HZWlN7e1uqAF2MnMAvY9YimV1jmkN0XlgTwRlUh8RZS7J73mmURA3YNT8RUKaD5FLm2xrUVTo5rtgHVrtvZkKGNF-4XUK7YOFcH7g0Gnbmm1qU7Jxjh8_Omy1Y4Em9nVSQnH6KXLCFY7S5UpVGOJuKHw7WQ_8rRqGm4fNIFsEJbjxFt6rjXpAtpvaan-Grr2eo0Oo9iVdTPs07uWvU3F2wR5iIHCN7ZjKbDuQdxaUpqA6TTBr4VoXF-qOYM81UYfeuOXAqtPK4g0BUJ5pg48mtUs6hD7TN5AHcaLmrtmnbriIzYlt3_LfwxdYCXqJKqRiHrpWvvmIPYPtcpLTCA\",\"path\":[\"body\",\"access_token\"]},\"_p_error.status_code\":{\"ret_btype\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_btype\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_btype\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"token_type\\\\\\\":\\\\\\\"Bearer\\\\\\\",\\\\\\\"expires_in\\\\\\\":3599,\\\\\\\"ext_expires_in\\\\\\\":3599,\\\\\\\"access_token\\\\\\\":\\\\\\\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyIsImtpZCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyJ9.eyJhdWQiOiJodHRwczovL2FwaS5idXNpbmVzc2NlbnRyYWwuZHluYW1pY3MuY29tIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjLyIsImlhdCI6MTcyNzk1MDA4MCwibmJmIjoxNzI3OTUwMDgwLCJleHAiOjE3Mjc5NTM5ODAsImFpbyI6ImsyQmdZSmk2UCsxQnVYUnIycmsxa250NHY4VStCUUE9IiwiYXBwaWQiOiJmNzJlZGQzZi0zMDAwLTRlM2QtOTBjZS00NGZlZDZmNjliMWQiLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kZWQzN2FlYy1mMjVhLTRlMmEtYWUxMS1iYTc3MWIzNDcxMmMvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiJlYzI5NjdiNS0xYWM1LTQ4MDktOTJkNy0wMDJlYTBiZTYxZWMiLCJyaCI6IjAuQVJFQTdIclQzbHJ5S2s2dUVicDNHelJ4TEQzdmJabHNzMU5CaGdlbV9Ud0J1SjhYQVFBLiIsInJvbGVzIjpbIkF1dG9tYXRpb24uUmVhZFdyaXRlLkFsbCIsImFwcF9hY2Nlc3MiLCJBZG1pbkNlbnRlci5SZWFkV3JpdGUuQWxsIiwiQVBJLlJlYWRXcml0ZS5BbGwiXSwic3ViIjoiZWMyOTY3YjUtMWFjNS00ODA5LTkyZDctMDAyZWEwYmU2MWVjIiwidGlkIjoiZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjIiwidXRpIjoiWVpXRWhIVTNZMFdxSGk4dEppdEhBQSIsInZlciI6IjEuMCIsInhtc19pZHJlbCI6IjYgNyJ9.ZR_HZWlN7e1uqAF2MnMAvY9YimV1jmkN0XlgTwRlUh8RZS7J73mmURA3YNT8RUKaD5FLm2xrUVTo5rtgHVrtvZkKGNF-4XUK7YOFcH7g0Gnbmm1qU7Jxjh8_Omy1Y4Em9nVSQnH6KXLCFY7S5UpVGOJuKHw7WQ_8rRqGm4fNIFsEJbjxFt6rjXpAtpvaan-Grr2eo0Oo9iVdTPs07uWvU3F2wR5iIHCN7ZjKbDuQdxaUpqA6TTBr4VoXF-qOYM81UYfeuOXAqtPK4g0BUJ5pg48mtUs6hD7TN5AHcaLmrtmnbriIzYlt3_LfwxdYCXqJKqRiHrpWvvmIPYPtcpLTCA\\\\\\\"}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_btype\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}}}",
+            "url": "https://login.microsoftonline.com/[TenantID]/oauth2/v2.0/token",
+            "url_params": {
+                "ABA": {
+                    "doc": "Enter the tenant ID to connect to",
+                    "key": "TenantID",
+                    "private": true,
+                    "visibility": "secret"
+                }
+            },
+            "wrap_error": true
+        },
+        "ABE": {
+            "body": "grant_type=client_credentials\n&client_id=_*_ClientID_*_\n&client_secret=_*_ClientSecret_*_\n&scope=https://api.businesscentral.dynamics.com/.default",
+            "body_params": {
+                "ABH": {
+                    "doc": "Enter the client or application ID that you created in Azure Portal and registered in Business Central previously",
+                    "key": "ClientID",
+                    "private": true,
+                    "visibility": "secret"
+                },
+                "ABI": {
+                    "doc": "Enter the client secret ID that you created in Azure portal and registered in Business Central previously",
+                    "key": "ClientSecret",
+                    "private": true,
+                    "visibility": "secret"
+                }
+            },
+            "body_type": "plain_text",
+            "headers": {
+                "ABG": {
+                    "key": "Content-type",
+                    "private": true,
+                    "value": "application/x-www-form-urlencoded",
+                    "visibility": "hidden"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Get Auth Token (Action)",
+            "publish_as": "action",
+            "rank": 0,
+            "ret_value": "api.1727941107544x715465314016952300.plugin_api.ABE",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABE\":{\"caption\":\"Get Auth Token (Action)\",\"fields\":{\"_p_body.token_type\":{\"ret_btype\":\"text\",\"caption\":\"body token_type\",\"sample_value\":\"Bearer\",\"path\":[\"body\",\"token_type\"]},\"_p_body.expires_in\":{\"ret_btype\":\"number\",\"caption\":\"body expires_in\",\"sample_value\":3599,\"path\":[\"body\",\"expires_in\"]},\"_p_body.ext_expires_in\":{\"ret_btype\":\"number\",\"caption\":\"body ext_expires_in\",\"sample_value\":3599,\"path\":[\"body\",\"ext_expires_in\"]},\"_p_body.access_token\":{\"ret_btype\":\"text\",\"caption\":\"body access_token\",\"sample_value\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyIsImtpZCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyJ9.eyJhdWQiOiJodHRwczovL2FwaS5idXNpbmVzc2NlbnRyYWwuZHluYW1pY3MuY29tIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjLyIsImlhdCI6MTcyNzk1MDA4MCwibmJmIjoxNzI3OTUwMDgwLCJleHAiOjE3Mjc5NTM5ODAsImFpbyI6ImsyQmdZSmk2UCsxQnVYUnIycmsxa250NHY4VStCUUE9IiwiYXBwaWQiOiJmNzJlZGQzZi0zMDAwLTRlM2QtOTBjZS00NGZlZDZmNjliMWQiLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kZWQzN2FlYy1mMjVhLTRlMmEtYWUxMS1iYTc3MWIzNDcxMmMvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiJlYzI5NjdiNS0xYWM1LTQ4MDktOTJkNy0wMDJlYTBiZTYxZWMiLCJyaCI6IjAuQVJFQTdIclQzbHJ5S2s2dUVicDNHelJ4TEQzdmJabHNzMU5CaGdlbV9Ud0J1SjhYQVFBLiIsInJvbGVzIjpbIkF1dG9tYXRpb24uUmVhZFdyaXRlLkFsbCIsImFwcF9hY2Nlc3MiLCJBZG1pbkNlbnRlci5SZWFkV3JpdGUuQWxsIiwiQVBJLlJlYWRXcml0ZS5BbGwiXSwic3ViIjoiZWMyOTY3YjUtMWFjNS00ODA5LTkyZDctMDAyZWEwYmU2MWVjIiwidGlkIjoiZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjIiwidXRpIjoiWVpXRWhIVTNZMFdxSGk4dEppdEhBQSIsInZlciI6IjEuMCIsInhtc19pZHJlbCI6IjYgNyJ9.ZR_HZWlN7e1uqAF2MnMAvY9YimV1jmkN0XlgTwRlUh8RZS7J73mmURA3YNT8RUKaD5FLm2xrUVTo5rtgHVrtvZkKGNF-4XUK7YOFcH7g0Gnbmm1qU7Jxjh8_Omy1Y4Em9nVSQnH6KXLCFY7S5UpVGOJuKHw7WQ_8rRqGm4fNIFsEJbjxFt6rjXpAtpvaan-Grr2eo0Oo9iVdTPs07uWvU3F2wR5iIHCN7ZjKbDuQdxaUpqA6TTBr4VoXF-qOYM81UYfeuOXAqtPK4g0BUJ5pg48mtUs6hD7TN5AHcaLmrtmnbriIzYlt3_LfwxdYCXqJKqRiHrpWvvmIPYPtcpLTCA\",\"path\":[\"body\",\"access_token\"]},\"_p_error.status_code\":{\"ret_btype\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_btype\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_btype\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"token_type\\\\\\\":\\\\\\\"Bearer\\\\\\\",\\\\\\\"expires_in\\\\\\\":3599,\\\\\\\"ext_expires_in\\\\\\\":3599,\\\\\\\"access_token\\\\\\\":\\\\\\\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyIsImtpZCI6Ik1jN2wzSXo5M2c3dXdnTmVFbW13X1dZR1BrbyJ9.eyJhdWQiOiJodHRwczovL2FwaS5idXNpbmVzc2NlbnRyYWwuZHluYW1pY3MuY29tIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjLyIsImlhdCI6MTcyNzk1MDA4MCwibmJmIjoxNzI3OTUwMDgwLCJleHAiOjE3Mjc5NTM5ODAsImFpbyI6ImsyQmdZSmk2UCsxQnVYUnIycmsxa250NHY4VStCUUE9IiwiYXBwaWQiOiJmNzJlZGQzZi0zMDAwLTRlM2QtOTBjZS00NGZlZDZmNjliMWQiLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kZWQzN2FlYy1mMjVhLTRlMmEtYWUxMS1iYTc3MWIzNDcxMmMvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiJlYzI5NjdiNS0xYWM1LTQ4MDktOTJkNy0wMDJlYTBiZTYxZWMiLCJyaCI6IjAuQVJFQTdIclQzbHJ5S2s2dUVicDNHelJ4TEQzdmJabHNzMU5CaGdlbV9Ud0J1SjhYQVFBLiIsInJvbGVzIjpbIkF1dG9tYXRpb24uUmVhZFdyaXRlLkFsbCIsImFwcF9hY2Nlc3MiLCJBZG1pbkNlbnRlci5SZWFkV3JpdGUuQWxsIiwiQVBJLlJlYWRXcml0ZS5BbGwiXSwic3ViIjoiZWMyOTY3YjUtMWFjNS00ODA5LTkyZDctMDAyZWEwYmU2MWVjIiwidGlkIjoiZGVkMzdhZWMtZjI1YS00ZTJhLWFlMTEtYmE3NzFiMzQ3MTJjIiwidXRpIjoiWVpXRWhIVTNZMFdxSGk4dEppdEhBQSIsInZlciI6IjEuMCIsInhtc19pZHJlbCI6IjYgNyJ9.ZR_HZWlN7e1uqAF2MnMAvY9YimV1jmkN0XlgTwRlUh8RZS7J73mmURA3YNT8RUKaD5FLm2xrUVTo5rtgHVrtvZkKGNF-4XUK7YOFcH7g0Gnbmm1qU7Jxjh8_Omy1Y4Em9nVSQnH6KXLCFY7S5UpVGOJuKHw7WQ_8rRqGm4fNIFsEJbjxFt6rjXpAtpvaan-Grr2eo0Oo9iVdTPs07uWvU3F2wR5iIHCN7ZjKbDuQdxaUpqA6TTBr4VoXF-qOYM81UYfeuOXAqtPK4g0BUJ5pg48mtUs6hD7TN5AHcaLmrtmnbriIzYlt3_LfwxdYCXqJKqRiHrpWvvmIPYPtcpLTCA\\\\\\\"}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_btype\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}}}",
+            "url": "https://login.microsoftonline.com/[TenantID]/oauth2/v2.0/token",
+            "url_params": {
+                "ABF": {
+                    "doc": "Enter the tenant ID to connect to",
+                    "key": "TenantID",
+                    "private": true,
+                    "visibility": "secret"
+                }
+            },
+            "wrap_error": true
+        },
+        "ABJ": {
+            "headers": {
+                "ABM": {
+                    "doc": "Type Bearer (with a space at the end) followed by the Access_Token obtained from the Get Auth Token call",
+                    "key": "Authorization",
+                    "private": true
+                },
+                "ABN": {
+                    "doc": "Set a different value on each call to force Bubble not to read from the cache",
+                    "key": "DateTimeForRefresh",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "get",
+            "name": "Get Customers",
+            "publish_as": "data",
+            "rank": 3,
+            "ret_value": "api.1727941107544x715465314016952300.plugin_api.ABJ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABJ\":{\"caption\":\"Get Customer\",\"fields\":{\"_p_body.@odata__dot__context\":{\"ret_btype\":\"text\",\"caption\":\"body @odata.context\",\"sample_value\":\"https://api.businesscentral.dynamics.com/v2.0/Sandbox25/api/v2.0/$metadata#companies(0629664e-9b69-ef11-a677-6045bde984b0)/customers\",\"path\":[\"body\",\"@odata.context\"]},\"_p_body.value\":{\"ret_btype\":\"list.api.1727941107544x715465314016952300.plugin_api.ABJ.body.value\",\"caption\":\"body value\",\"path\":[\"body\",\"value\"]},\"_p_error.status_code\":{\"ret_btype\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_btype\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_btype\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"@odata.context\\\\\\\":\\\\\\\"https://api.businesscentral.dynamics.com/v2.0/Sandbox25/api/v2.0/$metadata#companies(0629664e-9b69-ef11-a677-6045bde984b0)/customers\\\\\\\",\\\\\\\"value\\\\\\\":[{\\\\\\\"@odata.etag\\\\\\\":\\\\\\\"W/\\\\\\\\\\\\\\\"JzE5OzQyMTM5NjA2Mzk4MzcxMjU2MzQxOzAwOyc=\\\\\\\\\\\\\\\"\\\\\\\",\\\\\\\"id\\\\\\\":\\\\\\\"c83deb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"10000\\\\\\\",\\\\\\\"displayName\\\\\\\":\\\\\\\"Adatum Corporation\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"Company\\\\\\\",\\\\\\\"addressLine1\\\\\\\":\\\\\\\"192 Market Square\\\\\\\",\\\\\\\"addressLine2\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"city\\\\\\\":\\\\\\\"Atlanta\\\\\\\",\\\\\\\"state\\\\\\\":\\\\\\\"GA\\\\\\\",\\\\\\\"country\\\\\\\":\\\\\\\"US\\\\\\\",\\\\\\\"postalCode\\\\\\\":\\\\\\\"31772\\\\\\\",\\\\\\\"phoneNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"robert.townes@contoso.com\\\\\\\",\\\\\\\"website\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"salespersonCode\\\\\\\":\\\\\\\"JO\\\\\\\",\\\\\\\"balanceDue\\\\\\\":0,\\\\\\\"creditLimit\\\\\\\":0,\\\\\\\"taxLiable\\\\\\\":true,\\\\\\\"taxAreaId\\\\\\\":\\\\\\\"b900d40d-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"taxAreaDisplayName\\\\\\\":\\\\\\\"ATLANTA, GA\\\\\\\",\\\\\\\"taxRegistrationNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"currencyId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"currencyCode\\\\\\\":\\\\\\\"USD\\\\\\\",\\\\\\\"paymentTermsId\\\\\\\":\\\\\\\"ca3beb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"shipmentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"paymentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"blocked\\\\\\\":\\\\\\\"_x0020_\\\\\\\",\\\\\\\"lastModifiedDateTime\\\\\\\":\\\\\\\"2024-09-03T02:42:32.39Z\\\\\\\"},{\\\\\\\"@odata.etag\\\\\\\":\\\\\\\"W/\\\\\\\\\\\\\\\"JzIwOzE4MzE0MTc0MDI3MzA5Nzc0NDcxMTswMDsn\\\\\\\\\\\\\\\"\\\\\\\",\\\\\\\"id\\\\\\\":\\\\\\\"c93deb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"20000\\\\\\\",\\\\\\\"displayName\\\\\\\":\\\\\\\"Trey Research\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"Company\\\\\\\",\\\\\\\"addressLine1\\\\\\\":\\\\\\\"153 Thomas Drive\\\\\\\",\\\\\\\"addressLine2\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"city\\\\\\\":\\\\\\\"Chicago\\\\\\\",\\\\\\\"state\\\\\\\":\\\\\\\"IL\\\\\\\",\\\\\\\"country\\\\\\\":\\\\\\\"US\\\\\\\",\\\\\\\"postalCode\\\\\\\":\\\\\\\"61236\\\\\\\",\\\\\\\"phoneNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"helen.ray@contoso.com\\\\\\\",\\\\\\\"website\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"salespersonCode\\\\\\\":\\\\\\\"JO\\\\\\\",\\\\\\\"balanceDue\\\\\\\":3036.6,\\\\\\\"creditLimit\\\\\\\":0,\\\\\\\"taxLiable\\\\\\\":true,\\\\\\\"taxAreaId\\\\\\\":\\\\\\\"ba00d40d-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"taxAreaDisplayName\\\\\\\":\\\\\\\"CHICAGO, IL\\\\\\\",\\\\\\\"taxRegistrationNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"currencyId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"currencyCode\\\\\\\":\\\\\\\"USD\\\\\\\",\\\\\\\"paymentTermsId\\\\\\\":\\\\\\\"c83beb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"shipmentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"paymentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"blocked\\\\\\\":\\\\\\\"_x0020_\\\\\\\",\\\\\\\"lastModifiedDateTime\\\\\\\":\\\\\\\"2024-09-03T02:42:32.403Z\\\\\\\"},{\\\\\\\"@odata.etag\\\\\\\":\\\\\\\"W/\\\\\\\\\\\\\\\"JzIwOzE2OTkxMTI3MDgyNTU5NzU0MDU0MTswMDsn\\\\\\\\\\\\\\\"\\\\\\\",\\\\\\\"id\\\\\\\":\\\\\\\"ca3deb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"30000\\\\\\\",\\\\\\\"displayName\\\\\\\":\\\\\\\"School of Fine Art\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"Company\\\\\\\",\\\\\\\"addressLine1\\\\\\\":\\\\\\\"10 High Tower Green\\\\\\\",\\\\\\\"addressLine2\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"city\\\\\\\":\\\\\\\"Miami\\\\\\\",\\\\\\\"state\\\\\\\":\\\\\\\"FL\\\\\\\",\\\\\\\"country\\\\\\\":\\\\\\\"US\\\\\\\",\\\\\\\"postalCode\\\\\\\":\\\\\\\"37125\\\\\\\",\\\\\\\"phoneNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"meagan.bond@contoso.com\\\\\\\",\\\\\\\"website\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"salespersonCode\\\\\\\":\\\\\\\"JO\\\\\\\",\\\\\\\"balanceDue\\\\\\\":53833.52,\\\\\\\"creditLimit\\\\\\\":0,\\\\\\\"taxLiable\\\\\\\":true,\\\\\\\"taxAreaId\\\\\\\":\\\\\\\"bb00d40d-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"taxAreaDisplayName\\\\\\\":\\\\\\\"MIAMI, FL\\\\\\\",\\\\\\\"taxRegistrationNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"currencyId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"currencyCode\\\\\\\":\\\\\\\"USD\\\\\\\",\\\\\\\"paymentTermsId\\\\\\\":\\\\\\\"d03beb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"shipmentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"paymentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"blocked\\\\\\\":\\\\\\\"_x0020_\\\\\\\",\\\\\\\"lastModifiedDateTime\\\\\\\":\\\\\\\"2024-09-03T02:42:32.45Z\\\\\\\"},{\\\\\\\"@odata.etag\\\\\\\":\\\\\\\"W/\\\\\\\\\\\\\\\"JzIwOzE0OTA0MDc3ODcxOTQwMTM5MTM1MTswMDsn\\\\\\\\\\\\\\\"\\\\\\\",\\\\\\\"id\\\\\\\":\\\\\\\"cb3deb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"40000\\\\\\\",\\\\\\\"displayName\\\\\\\":\\\\\\\"Alpine Ski House\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"Company\\\\\\\",\\\\\\\"addressLine1\\\\\\\":\\\\\\\"10 Deerfield Road\\\\\\\",\\\\\\\"addressLine2\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"city\\\\\\\":\\\\\\\"Atlanta\\\\\\\",\\\\\\\"state\\\\\\\":\\\\\\\"GA\\\\\\\",\\\\\\\"country\\\\\\\":\\\\\\\"US\\\\\\\",\\\\\\\"postalCode\\\\\\\":\\\\\\\"31772\\\\\\\",\\\\\\\"phoneNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"ian.deberry@contoso.com\\\\\\\",\\\\\\\"website\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"salespersonCode\\\\\\\":\\\\\\\"JO\\\\\\\",\\\\\\\"balanceDue\\\\\\\":4316.92,\\\\\\\"creditLimit\\\\\\\":0,\\\\\\\"taxLiable\\\\\\\":true,\\\\\\\"taxAreaId\\\\\\\":\\\\\\\"bc00d40d-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"taxAreaDisplayName\\\\\\\":\\\\\\\"Atlanta, GA - North\\\\\\\",\\\\\\\"taxRegistrationNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"currencyId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"currencyCode\\\\\\\":\\\\\\\"USD\\\\\\\",\\\\\\\"paymentTermsId\\\\\\\":\\\\\\\"ca3beb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"shipmentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"paymentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"blocked\\\\\\\":\\\\\\\"_x0020_\\\\\\\",\\\\\\\"lastModifiedDateTime\\\\\\\":\\\\\\\"2024-09-03T02:42:32.463Z\\\\\\\"},{\\\\\\\"@odata.etag\\\\\\\":\\\\\\\"W/\\\\\\\\\\\\\\\"JzIwOzE2MTM1MzMxNDQ3NDI2OTE2MTMwMTswMDsn\\\\\\\\\\\\\\\"\\\\\\\",\\\\\\\"id\\\\\\\":\\\\\\\"cc3deb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"50000\\\\\\\",\\\\\\\"displayName\\\\\\\":\\\\\\\"Relecloud\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"Company\\\\\\\",\\\\\\\"addressLine1\\\\\\\":\\\\\\\"25 Water Way\\\\\\\",\\\\\\\"addressLine2\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"city\\\\\\\":\\\\\\\"Atlanta\\\\\\\",\\\\\\\"state\\\\\\\":\\\\\\\"GA\\\\\\\",\\\\\\\"country\\\\\\\":\\\\\\\"US\\\\\\\",\\\\\\\"postalCode\\\\\\\":\\\\\\\"31772\\\\\\\",\\\\\\\"phoneNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"email\\\\\\\":\\\\\\\"jesse.homer@contoso.com\\\\\\\",\\\\\\\"website\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"salespersonCode\\\\\\\":\\\\\\\"JO\\\\\\\",\\\\\\\"balanceDue\\\\\\\":8836.8,\\\\\\\"creditLimit\\\\\\\":0,\\\\\\\"taxLiable\\\\\\\":true,\\\\\\\"taxAreaId\\\\\\\":\\\\\\\"b900d40d-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"taxAreaDisplayName\\\\\\\":\\\\\\\"ATLANTA, GA\\\\\\\",\\\\\\\"taxRegistrationNumber\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"currencyId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"currencyCode\\\\\\\":\\\\\\\"USD\\\\\\\",\\\\\\\"paymentTermsId\\\\\\\":\\\\\\\"c83beb08-9e69-ef11-a677-6045bde984b0\\\\\\\",\\\\\\\"shipmentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"paymentMethodId\\\\\\\":\\\\\\\"00000000-0000-0000-0000-000000000000\\\\\\\",\\\\\\\"blocked\\\\\\\":\\\\\\\"_x0020_\\\\\\\",\\\\\\\"lastModifiedDateTime\\\\\\\":\\\\\\\"2024-09-03T02:42:32.477Z\\\\\\\"}]}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_btype\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}},\"plugin_api.ABJ.body.value\":{\"caption\":\"Get Customers body value\",\"fields\":{\"_p_@odata__dot__etag\":{\"ret_btype\":\"text\",\"caption\":\"@odata.etag\",\"sample_value\":\"W/\\\"JzE5OzQyMTM5NjA2Mzk4MzcxMjU2MzQxOzAwOyc=\\\"\",\"path\":[\"@odata.etag\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"c83deb08-9e69-ef11-a677-6045bde984b0\",\"path\":[\"id\"]},\"_p_number\":{\"ret_btype\":\"text\",\"caption\":\"number\",\"sample_value\":\"10000\",\"path\":[\"number\"]},\"_p_displayName\":{\"ret_btype\":\"text\",\"caption\":\"displayName\",\"sample_value\":\"Adatum Corporation\",\"path\":[\"displayName\"]},\"_p_type\":{\"ret_btype\":\"text\",\"caption\":\"type\",\"sample_value\":\"Company\",\"path\":[\"type\"]},\"_p_addressLine1\":{\"ret_btype\":\"text\",\"caption\":\"addressLine1\",\"sample_value\":\"192 Market Square\",\"path\":[\"addressLine1\"]},\"_p_addressLine2\":{\"ret_btype\":\"text\",\"caption\":\"addressLine2\",\"sample_value\":\"\",\"path\":[\"addressLine2\"]},\"_p_city\":{\"ret_btype\":\"text\",\"caption\":\"city\",\"sample_value\":\"Atlanta\",\"path\":[\"city\"]},\"_p_state\":{\"ret_btype\":\"text\",\"caption\":\"state\",\"sample_value\":\"GA\",\"path\":[\"state\"]},\"_p_country\":{\"ret_btype\":\"text\",\"caption\":\"country\",\"sample_value\":\"US\",\"path\":[\"country\"]},\"_p_postalCode\":{\"ret_btype\":\"text\",\"caption\":\"postalCode\",\"sample_value\":\"31772\",\"path\":[\"postalCode\"]},\"_p_phoneNumber\":{\"ret_btype\":\"text\",\"caption\":\"phoneNumber\",\"sample_value\":\"\",\"path\":[\"phoneNumber\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"robert.townes@contoso.com\",\"path\":[\"email\"]},\"_p_website\":{\"ret_btype\":\"text\",\"caption\":\"website\",\"sample_value\":\"\",\"path\":[\"website\"]},\"_p_salespersonCode\":{\"ret_btype\":\"text\",\"caption\":\"salespersonCode\",\"sample_value\":\"JO\",\"path\":[\"salespersonCode\"]},\"_p_balanceDue\":{\"ret_btype\":\"number\",\"caption\":\"balanceDue\",\"sample_value\":0,\"path\":[\"balanceDue\"]},\"_p_creditLimit\":{\"ret_btype\":\"number\",\"caption\":\"creditLimit\",\"sample_value\":0,\"path\":[\"creditLimit\"]},\"_p_taxLiable\":{\"ret_btype\":\"boolean\",\"caption\":\"taxLiable\",\"sample_value\":true,\"path\":[\"taxLiable\"]},\"_p_taxAreaId\":{\"ret_btype\":\"text\",\"caption\":\"taxAreaId\",\"sample_value\":\"b900d40d-9e69-ef11-a677-6045bde984b0\",\"path\":[\"taxAreaId\"]},\"_p_taxAreaDisplayName\":{\"ret_btype\":\"text\",\"caption\":\"taxAreaDisplayName\",\"sample_value\":\"ATLANTA, GA\",\"path\":[\"taxAreaDisplayName\"]},\"_p_taxRegistrationNumber\":{\"ret_btype\":\"text\",\"caption\":\"taxRegistrationNumber\",\"sample_value\":\"\",\"path\":[\"taxRegistrationNumber\"]},\"_p_currencyId\":{\"ret_btype\":\"text\",\"caption\":\"currencyId\",\"sample_value\":\"00000000-0000-0000-0000-000000000000\",\"path\":[\"currencyId\"]},\"_p_currencyCode\":{\"ret_btype\":\"text\",\"caption\":\"currencyCode\",\"sample_value\":\"USD\",\"path\":[\"currencyCode\"]},\"_p_paymentTermsId\":{\"ret_btype\":\"text\",\"caption\":\"paymentTermsId\",\"sample_value\":\"ca3beb08-9e69-ef11-a677-6045bde984b0\",\"path\":[\"paymentTermsId\"]},\"_p_shipmentMethodId\":{\"ret_btype\":\"text\",\"caption\":\"shipmentMethodId\",\"sample_value\":\"00000000-0000-0000-0000-000000000000\",\"path\":[\"shipmentMethodId\"]},\"_p_paymentMethodId\":{\"ret_btype\":\"text\",\"caption\":\"paymentMethodId\",\"sample_value\":\"00000000-0000-0000-0000-000000000000\",\"path\":[\"paymentMethodId\"]},\"_p_blocked\":{\"ret_btype\":\"text\",\"caption\":\"blocked\",\"sample_value\":\"_x0020_\",\"path\":[\"blocked\"]},\"_p_lastModifiedDateTime\":{\"ret_btype\":\"date_unix\",\"caption\":\"lastModifiedDateTime\",\"sample_value\":\"2024-09-03T02:42:32.39Z\",\"path\":[\"lastModifiedDateTime\"]}}}}",
+            "url": "https://api.businesscentral.dynamics.com/v2.0/[Environment]/api/v2.0/companies([CompanyID])/customers",
+            "url_params": {
+                "ABK": {
+                    "doc": "Enter the name of the environment, typically Production or Sandbox",
+                    "key": "Environment",
+                    "private": true,
+                    "value": "Sandbox"
+                },
+                "ABL": {
+                    "doc": "The company ID obtained from the Get Companies call",
+                    "key": "CompanyID",
+                    "private": true
+                }
+            },
+            "wrap_error": true
         },
         "token_call": {
             "body": "grant_type=client_credentials&\nclient_id=<ClientID>&\nclient_secret=<ClientSecret>&\nscope=https://api.businesscentral.dynamics.com/.default",
@@ -58,7 +201,5 @@
     "generate_token_from_code_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
     "human": "BC2Bubble",
     "oauth_user_data_call": "https://graph.microsoft.com/v1.0/me",
-    "scope": "https://api.businesscentral.dynamics.com/.default",
-    "shared_headers": {
-    }
+    "scope": "https://api.businesscentral.dynamics.com/.default"
 }

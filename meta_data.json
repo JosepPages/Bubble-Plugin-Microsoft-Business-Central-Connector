@@ -3,6 +3,7 @@
         "0": "data (things)",
         "1": "productivity"
     },
+    "data_tracked": false,
     "description": "Bubble plugin to connect with Microsoft Business Central via API.",
     "license": "private",
     "name": "Microsoft Business Central Connector",
