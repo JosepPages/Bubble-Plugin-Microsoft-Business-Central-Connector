@@ -1,0 +1,23 @@
+{
+    "category": "plugins",
+    "display": "GetTenant",
+    "fields": {
+        "AAo": {
+            "caption": "TheTenant2",
+            "editor": "DynamicValue",
+            "name": "thetenant2",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AAp": {
+            "caption": "sharedTenant",
+            "name": "sharedtenant",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": false
+}

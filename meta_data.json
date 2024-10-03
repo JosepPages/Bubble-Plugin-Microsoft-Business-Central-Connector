@@ -1,0 +1,10 @@
+{
+    "categories": {
+        "0": "data (things)",
+        "1": "productivity"
+    },
+    "description": "Bubble plugin to connect with Microsoft Business Central via API.",
+    "license": "private",
+    "name": "Microsoft Business Central Connector",
+    "sa_node_version": 18
+}

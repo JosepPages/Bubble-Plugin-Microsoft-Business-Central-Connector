@@ -1,0 +1,57 @@
+{
+    "add_to_header": true,
+    "auth": "oauth2_custom",
+    "calls": {
+        "AAL": {
+            "initialized": true,
+            "method": "get",
+            "name": "GetCompanies",
+            "publish_as": "data",
+            "rank": 0,
+            "ret_value": "api.1727941107544x715465314016952300.plugin_api.AAL",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAL\":{\"caption\":\"GetCompanie\",\"fields\":{\"_p_@odata__dot__context\":{\"ret_btype\":\"text\",\"caption\":\"@odata.context\",\"sample_value\":\"https://api.businesscentral.dynamics.com/v2.0/Sandbox25/api/v2.0/$metadata#companies\",\"path\":[\"@odata.context\"]},\"_p_value\":{\"ret_btype\":\"list.api.1727941107544x715465314016952300.plugin_api.AAL.value\",\"caption\":\"value\",\"path\":[\"value\"]}}},\"plugin_api.AAL.value\":{\"caption\":\"GetCompanies value\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"0629664e-9b69-ef11-a677-6045bde984b0\",\"path\":[\"id\"]},\"_p_systemVersion\":{\"ret_btype\":\"text\",\"caption\":\"systemVersion\",\"sample_value\":\"25.0.23364.23635\",\"path\":[\"systemVersion\"]},\"_p_timestamp\":{\"ret_btype\":\"number\",\"caption\":\"timestamp\",\"sample_value\":4613,\"path\":[\"timestamp\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"CRONUS USA, Inc.\",\"path\":[\"name\"]},\"_p_displayName\":{\"ret_btype\":\"text\",\"caption\":\"displayName\",\"sample_value\":\"\",\"path\":[\"displayName\"]},\"_p_businessProfileId\":{\"ret_btype\":\"text\",\"caption\":\"businessProfileId\",\"sample_value\":\"\",\"path\":[\"businessProfileId\"]},\"_p_systemCreatedAt\":{\"ret_btype\":\"date_unix\",\"caption\":\"systemCreatedAt\",\"sample_value\":\"2024-09-03T02:22:04.51Z\",\"path\":[\"systemCreatedAt\"]},\"_p_systemCreatedBy\":{\"ret_btype\":\"text\",\"caption\":\"systemCreatedBy\",\"sample_value\":\"00000000-0000-0000-0000-000000000001\",\"path\":[\"systemCreatedBy\"]},\"_p_systemModifiedAt\":{\"ret_btype\":\"date_unix\",\"caption\":\"systemModifiedAt\",\"sample_value\":\"2024-09-03T02:22:04.51Z\",\"path\":[\"systemModifiedAt\"]},\"_p_systemModifiedBy\":{\"ret_btype\":\"text\",\"caption\":\"systemModifiedBy\",\"sample_value\":\"00000000-0000-0000-0000-000000000001\",\"path\":[\"systemModifiedBy\"]}}}}",
+            "url": "https://api.businesscentral.dynamics.com/v2.0/[environment]/api/v2.0/companies",
+            "url_params": {
+                "AAq": {
+                    "key": "environment",
+                    "private": true,
+                    "value": "Sandbox25"
+                }
+            }
+        },
+        "token_call": {
+            "body": "grant_type=client_credentials&client_id=<ClientID>&client_secret=<ClientSecret>     &scope=https://api.businesscentral.dynamics.com/.default",
+            "body_params": {
+                "AAe": {
+                    "doc": "f72edd3f-3000-4e3d-90ce-44fed6f69b1d",
+                    "key": "ClientID",
+                    "private": true,
+                    "value": "f72edd3f-3000-4e3d-90ce-44fed6f69b1d"
+                },
+                "AAg": {
+                    "doc": "I658Q~XV-R9qk54DwexbLnnZe7vFYOHacWJ2-doS",
+                    "key": "ClientSecret",
+                    "private": true,
+                    "value": "I658Q~XV-R9qk54DwexbLnnZe7vFYOHacWJ2-doS"
+                }
+            },
+            "headers": {
+                "AAI": {
+                    "key": "Content-Type",
+                    "private": true,
+                    "value": "application/x-www-form-urlencoded",
+                    "visibility": "hidden"
+                }
+            },
+            "method": "post",
+            "url": "https://login.microsoftonline.com/ded37aec-f25a-4e2a-ae11-ba771b34712c/oauth2/v2.0/token"
+        }
+    },
+    "generate_token_from_code_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+    "human": "BC2Bubble",
+    "oauth_user_data_call": "https://graph.microsoft.com/v1.0/me",
+    "scope": "https://api.businesscentral.dynamics.com/.default",
+    "shared_headers": {
+    }
+}
