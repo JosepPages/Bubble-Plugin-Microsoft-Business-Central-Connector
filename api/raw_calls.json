@@ -21,7 +21,7 @@
             }
         },
         "token_call": {
-            "body": "grant_type=client_credentials&client_id=<ClientID>&client_secret=<ClientSecret>     &scope=https://api.businesscentral.dynamics.com/.default",
+            "body": "grant_type=client_credentials&\nclient_id=<ClientID>&\nclient_secret=<ClientSecret>&\nscope=https://api.businesscentral.dynamics.com/.default",
             "body_params": {
                 "AAe": {
                     "doc": "f72edd3f-3000-4e3d-90ce-44fed6f69b1d",
