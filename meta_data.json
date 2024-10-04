@@ -1,12 +1,14 @@
 {
     "categories": {
         "0": "data (things)",
-        "1": "productivity"
+        "1": "productivity",
+        "2": "analytics",
+        "3": "small business"
     },
     "data_tracked": false,
     "description": "Bubble plugin to connect with Microsoft Business Central via API.",
     "image": "//meta-q.cdn.bubble.io/f1727955298035x387384841172376100/Business%20Central.png",
-    "license": "open_source",
+    "license": "private",
     "link": "https://joseppages.notion.site/Bubble-Plugin-Connector-for-Microsoft-Business-Central-11423005c79c80f990d0fbf1ca2d3696?pvs=4",
     "name": "Microsoft Business Central Connector",
     "sa_node_version": 18
