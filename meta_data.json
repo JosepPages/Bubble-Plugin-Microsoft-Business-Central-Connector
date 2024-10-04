@@ -6,10 +6,12 @@
         "3": "small business"
     },
     "data_tracked": false,
-    "description": "Bubble plugin to connect with Microsoft Business Central via API.",
+    "demo_page": "https://testpluginbcconnector.bubbleapps.io/version-test",
+    "description": "Bubble plugin to connect with Microsoft Business Central via API.\n\nWith this plugin you will be able to connect Bubble apps to your Microsoft Business Central and access any data published by its standard API.\n\n(At the moment, only read access is possible to companies, customers and its contacts data.\nMore standard web services will be added soon)",
     "image": "//meta-q.cdn.bubble.io/f1727955298035x387384841172376100/Business%20Central.png",
-    "license": "private",
-    "link": "https://joseppages.notion.site/Bubble-Plugin-Connector-for-Microsoft-Business-Central-11423005c79c80f990d0fbf1ca2d3696?pvs=4",
-    "name": "Microsoft Business Central Connector",
+    "license": "open_source",
+    "link": "https://joseppages.notion.site/Microsoft-Business-Central-Connector-11523005c79c80238a77d96ed45577ec?pvs=4",
+    "name": "Business Central Connector",
+    "plugin_instructions": "Task 1: Register a Microsoft Entra application in Azure portal\n\nTask 2: Set up the Microsoft Entra application in Business Central\n\nTask 3: Configure Bubble Plugin Connector for Microsoft Business Central\n\nTask 4: Get data from your Business Central\n\nSee instructions at: https://joseppages.notion.site/Microsoft-Business-Central-Connector-11523005c79c80238a77d96ed45577ec?pvs=4",
     "sa_node_version": 18
 }
