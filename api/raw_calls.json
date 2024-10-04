@@ -239,40 +239,6 @@
                 }
             },
             "wrap_error": true
-        },
-        "token_call": {
-            "body": "grant_type=client_credentials&\nclient_id=<ClientID>&\nclient_secret=<ClientSecret>&\nscope=https://api.businesscentral.dynamics.com/.default",
-            "body_params": {
-                "AAe": {
-                    "doc": "f72edd3f-3000-4e3d-90ce-44fed6f69b1d",
-                    "key": "ClientID",
-                    "private": true,
-                    "value": "f72edd3f-3000-4e3d-90ce-44fed6f69b1d"
-                },
-                "AAg": {
-                    "doc": "I658Q~XV-R9qk54DwexbLnnZe7vFYOHacWJ2-doS",
-                    "key": "ClientSecret",
-                    "private": true,
-                    "value": "I658Q~XV-R9qk54DwexbLnnZe7vFYOHacWJ2-doS"
-                }
-            },
-            "headers": {
-                "AAI": {
-                    "key": "Content-Type",
-                    "private": true,
-                    "value": "application/x-www-form-urlencoded",
-                    "visibility": "hidden"
-                }
-            },
-            "method": "post",
-            "url": "https://login.microsoftonline.com/[tenantlogin]/oauth2/v2.0/token",
-            "url_params": {
-                "AAq": {
-                    "key": "tenantlogin",
-                    "private": true,
-                    "value": "ded37aec-f25a-4e2a-ae11-ba771b34712c"
-                }
-            }
         }
     },
     "generate_token_from_code_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
