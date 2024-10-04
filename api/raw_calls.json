@@ -243,9 +243,5 @@
             },
             "wrap_error": true
         }
-    },
-    "generate_token_from_code_uri": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
-    "human": "BC2Bubble",
-    "oauth_user_data_call": "https://graph.microsoft.com/v1.0/me",
-    "scope": "https://api.businesscentral.dynamics.com/.default"
+    }
 }
