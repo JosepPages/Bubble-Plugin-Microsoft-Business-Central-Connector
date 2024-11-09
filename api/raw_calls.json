@@ -217,7 +217,7 @@
                 }
             },
             "publish_as": "data",
-            "rank": 4,
+            "rank": 5,
             "ret_value": "api.1727941107544x715465314016952300.plugin_api.ABQ",
             "should_reinitialize": true,
             "types": "{\"plugin_api.ABQ\":{\"caption\":\"Get Cust ContactsInfo\",\"fields\":{\"_p_body.@odata__dot__context\":{\"ret_btype\":\"text\",\"caption\":\"body @odata.context\",\"sample_value\":\"https://api.businesscentral.dynamics.com/v2.0/Sandbox25/api/v2.0/$metadata#companies(0629664e-9b69-ef11-a677-6045bde984b0)/contactsInformation\",\"path\":[\"body\",\"@odata.context\"]},\"_p_body.value\":{\"ret_btype\":\"list.api.1727941107544x715465314016952300.plugin_api.ABQ.body.value\",\"caption\":\"body value\",\"path\":[\"body\",\"value\"]},\"_p_error.status_code\":{\"ret_btype\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_btype\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_btype\":\"text\",\"caption\":\"error body\",\"sample_value\":\"(value too large to save 17615 bytes)\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_btype\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}},\"plugin_api.ABQ.body.value\":{\"caption\":\"Get Cust ContactsInfo body value\",\"fields\":{\"_p_@odata__dot__etag\":{\"ret_btype\":\"text\",\"caption\":\"@odata.etag\",\"sample_value\":\"W/\\\"JzE5OzMxMzQ5NzkwNzYyOTc1MzQ1ODQxOzAwOyc=\\\"\",\"path\":[\"@odata.etag\"]},\"_p_contactId\":{\"ret_btype\":\"text\",\"caption\":\"contactId\",\"sample_value\":\"2b37c931-0fe2-ec11-bb49-000d3a2209fd\",\"path\":[\"contactId\"]},\"_p_contactNumber\":{\"ret_btype\":\"text\",\"caption\":\"contactNumber\",\"sample_value\":\"CO000003\",\"path\":[\"contactNumber\"]},\"_p_contactName\":{\"ret_btype\":\"text\",\"caption\":\"contactName\",\"sample_value\":\"Trey Research\",\"path\":[\"contactName\"]},\"_p_contactType\":{\"ret_btype\":\"text\",\"caption\":\"contactType\",\"sample_value\":\"Company\",\"path\":[\"contactType\"]},\"_p_relatedId\":{\"ret_btype\":\"text\",\"caption\":\"relatedId\",\"sample_value\":\"afefd02b-0fe2-ec11-bb49-000d3a2209fd\",\"path\":[\"relatedId\"]},\"_p_relatedType\":{\"ret_btype\":\"text\",\"caption\":\"relatedType\",\"sample_value\":\"Customer\",\"path\":[\"relatedType\"]}}}}",
@@ -263,23 +263,16 @@
             "method": "get",
             "name": "Get Aged Receivable",
             "params": {
-                "ABg": {
+                "ABi": {
                     "doc": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/webservices/use-filter-expressions-in-odata-uris",
                     "key": "$filter",
-                    "optional": true,
-                    "private": true,
-                    "value": ""
-                },
-                "ABh": {
-                    "doc": "Type the field names you want to order by separated by commas.",
-                    "key": "$orderby",
                     "optional": true,
                     "private": true,
                     "value": ""
                 }
             },
             "publish_as": "data",
-            "rank": 5,
+            "rank": 6,
             "ret_value": "api.1727941107544x715465314016952300.plugin_api.ABa",
             "should_reinitialize": true,
             "types": "{\"plugin_api.ABa\":{\"caption\":\"Get Aged Receivable\",\"fields\":{\"_p_body.@odata__dot__context\":{\"ret_btype\":\"text\",\"caption\":\"body @odata.context\",\"sample_value\":\"https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/$metadata#companies(0db9ddfb-0ee2-ec11-bb49-000d3a2209fd)/customers(afefd02b-0fe2-ec11-bb49-000d3a2209fd)/agedAccountsReceivable/$entity\",\"path\":[\"body\",\"@odata.context\"]},\"_p_body.@odata__dot__etag\":{\"ret_btype\":\"text\",\"caption\":\"body @odata.etag\",\"sample_value\":\"W/\\\"JzIwOzEzODcwMjQwMzQ5MjUzMDgyODIxMTswMDsn\\\"\",\"path\":[\"body\",\"@odata.etag\"]},\"_p_body.customerId\":{\"ret_btype\":\"text\",\"caption\":\"body customerId\",\"sample_value\":\"afefd02b-0fe2-ec11-bb49-000d3a2209fd\",\"path\":[\"body\",\"customerId\"]},\"_p_body.customerNumber\":{\"ret_btype\":\"text\",\"caption\":\"body customerNumber\",\"sample_value\":\"20000\",\"path\":[\"body\",\"customerNumber\"]},\"_p_body.name\":{\"ret_btype\":\"text\",\"caption\":\"body name\",\"sample_value\":\"Trey Research\",\"path\":[\"body\",\"name\"]},\"_p_body.currencyCode\":{\"ret_btype\":\"text\",\"caption\":\"body currencyCode\",\"sample_value\":\"EUR\",\"path\":[\"body\",\"currencyCode\"]},\"_p_body.balanceDue\":{\"ret_btype\":\"number\",\"caption\":\"body balanceDue\",\"sample_value\":15410.69,\"path\":[\"body\",\"balanceDue\"]},\"_p_body.currentAmount\":{\"ret_btype\":\"number\",\"caption\":\"body currentAmount\",\"sample_value\":0,\"path\":[\"body\",\"currentAmount\"]},\"_p_body.period1Label\":{\"ret_btype\":\"text\",\"caption\":\"body period1Label\",\"sample_value\":\"09/07/24-10/07/24\",\"path\":[\"body\",\"period1Label\"]},\"_p_body.period1Amount\":{\"ret_btype\":\"number\",\"caption\":\"body period1Amount\",\"sample_value\":0,\"path\":[\"body\",\"period1Amount\"]},\"_p_body.period2Label\":{\"ret_btype\":\"text\",\"caption\":\"body period2Label\",\"sample_value\":\"08/08/24-09/07/24\",\"path\":[\"body\",\"period2Label\"]},\"_p_body.period2Amount\":{\"ret_btype\":\"number\",\"caption\":\"body period2Amount\",\"sample_value\":0,\"path\":[\"body\",\"period2Amount\"]},\"_p_body.period3Label\":{\"ret_btype\":\"text\",\"caption\":\"body period3Label\",\"sample_value\":\"-08/08/24\",\"path\":[\"body\",\"period3Label\"]},\"_p_body.period3Amount\":{\"ret_btype\":\"number\",\"caption\":\"body period3Amount\",\"sample_value\":15410.69,\"path\":[\"body\",\"period3Amount\"]},\"_p_body.agedAsOfDate\":{\"ret_btype\":\"text\",\"caption\":\"body agedAsOfDate\",\"sample_value\":\"2024-10-07\",\"path\":[\"body\",\"agedAsOfDate\"]},\"_p_body.periodLengthFilter\":{\"ret_btype\":\"text\",\"caption\":\"body periodLengthFilter\",\"sample_value\":\"30D\",\"path\":[\"body\",\"periodLengthFilter\"]},\"_p_error.status_code\":{\"ret_btype\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_btype\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_btype\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"@odata.context\\\\\\\":\\\\\\\"https://api.businesscentral.dynamics.com/v2.0/Production/api/v2.0/$metadata#companies(0db9ddfb-0ee2-ec11-bb49-000d3a2209fd)/customers(afefd02b-0fe2-ec11-bb49-000d3a2209fd)/agedAccountsReceivable/$entity\\\\\\\",\\\\\\\"@odata.etag\\\\\\\":\\\\\\\"W/\\\\\\\\\\\\\\\"JzIwOzEzODcwMjQwMzQ5MjUzMDgyODIxMTswMDsn\\\\\\\\\\\\\\\"\\\\\\\",\\\\\\\"customerId\\\\\\\":\\\\\\\"afefd02b-0fe2-ec11-bb49-000d3a2209fd\\\\\\\",\\\\\\\"customerNumber\\\\\\\":\\\\\\\"20000\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Trey Research\\\\\\\",\\\\\\\"currencyCode\\\\\\\":\\\\\\\"EUR\\\\\\\",\\\\\\\"balanceDue\\\\\\\":15410.69,\\\\\\\"currentAmount\\\\\\\":0,\\\\\\\"period1Label\\\\\\\":\\\\\\\"09/07/24-10/07/24\\\\\\\",\\\\\\\"period1Amount\\\\\\\":0,\\\\\\\"period2Label\\\\\\\":\\\\\\\"08/08/24-09/07/24\\\\\\\",\\\\\\\"period2Amount\\\\\\\":0,\\\\\\\"period3Label\\\\\\\":\\\\\\\"-08/08/24\\\\\\\",\\\\\\\"period3Amount\\\\\\\":15410.69,\\\\\\\"agedAsOfDate\\\\\\\":\\\\\\\"2024-10-07\\\\\\\",\\\\\\\"periodLengthFilter\\\\\\\":\\\\\\\"30D\\\\\\\"}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_btype\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}}}",
@@ -300,6 +293,110 @@
                     "doc": "The customer ID obtained from the Get Customers call",
                     "key": "CustomerID",
                     "private": true
+                }
+            },
+            "wrap_error": true
+        },
+        "ABl": {
+            "body": "{\n    \"displayName\": \"<displayName>\",\n    \"addressLine1\": \"<addressLine1>\",\n    \"addressLine2\": \"<addressLine2>\",\n    \"city\": \"<city>\",\n    \"state\": \"<state>\",\n    \"country\": \"<country>\",\n    \"postalCode\": \"<postalCode>\",\n    \"phoneNumber\": \"<phoneNumber>\",\n    \"email\": \"<email>\",\n    \"website\": \"<website>\",\n    \"taxRegistrationNumber\": \"<taxRegistrationNumber>\",\n}",
+            "body_params": {
+                "ABs": {
+                    "key": "displayName",
+                    "private": true,
+                    "value": ""
+                },
+                "ABt": {
+                    "key": "addressLine1",
+                    "private": true,
+                    "value": ""
+                },
+                "ABu": {
+                    "key": "addressLine2",
+                    "private": true,
+                    "value": ""
+                },
+                "ABv": {
+                    "key": "city",
+                    "private": true,
+                    "value": ""
+                },
+                "ABw": {
+                    "key": "state",
+                    "private": true,
+                    "value": ""
+                },
+                "ABx": {
+                    "key": "country",
+                    "private": true,
+                    "value": ""
+                },
+                "ABy": {
+                    "key": "postalCode",
+                    "private": true,
+                    "value": ""
+                },
+                "ABz": {
+                    "key": "phoneNumber",
+                    "private": true,
+                    "value": ""
+                },
+                "ACA": {
+                    "key": "email",
+                    "private": true,
+                    "value": ""
+                },
+                "ACB": {
+                    "key": "website",
+                    "private": true,
+                    "value": ""
+                },
+                "ACC": {
+                    "key": "taxRegistrationNumber",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "headers": {
+                "ABp": {
+                    "doc": "Type Bearer (with a space at the end) followed by the Access_Token obtained from the Get Auth Token call",
+                    "key": "Authorization",
+                    "private": true,
+                    "value": "Bearer "
+                },
+                "ABr": {
+                    "doc": "The @odata.etag obtained from the Get Customers call",
+                    "key": "If-Match",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "patch",
+            "name": "Update Customer",
+            "publish_as": "action",
+            "rank": 4,
+            "ret_value": "api.1727941107544x715465314016952300.plugin_api.ABl",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABl\":{\"caption\":\"Update Customer\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"f2a5738a-44e3-ea11-bb43-000d3a2feca1\",\"path\":[\"id\"]},\"_p_number\":{\"ret_btype\":\"text\",\"caption\":\"number\",\"sample_value\":\"10000\",\"path\":[\"number\"]},\"_p_displayName\":{\"ret_btype\":\"text\",\"caption\":\"displayName\",\"sample_value\":\"Coho Winery Inc.\",\"path\":[\"displayName\"]},\"_p_type\":{\"ret_btype\":\"text\",\"caption\":\"type\",\"sample_value\":\"Company\",\"path\":[\"type\"]},\"_p_addressLine1\":{\"ret_btype\":\"text\",\"caption\":\"addressLine1\",\"sample_value\":\"192 Market Square\",\"path\":[\"addressLine1\"]},\"_p_addressLine2\":{\"ret_btype\":\"text\",\"caption\":\"addressLine2\",\"sample_value\":\"\",\"path\":[\"addressLine2\"]},\"_p_city\":{\"ret_btype\":\"text\",\"caption\":\"city\",\"sample_value\":\"Atlanta\",\"path\":[\"city\"]},\"_p_state\":{\"ret_btype\":\"text\",\"caption\":\"state\",\"sample_value\":\"GA\",\"path\":[\"state\"]},\"_p_country\":{\"ret_btype\":\"text\",\"caption\":\"country\",\"sample_value\":\"US\",\"path\":[\"country\"]},\"_p_postalCode\":{\"ret_btype\":\"text\",\"caption\":\"postalCode\",\"sample_value\":\"31772\",\"path\":[\"postalCode\"]},\"_p_phoneNumber\":{\"ret_btype\":\"text\",\"caption\":\"phoneNumber\",\"sample_value\":\"(555) 555-1234\",\"path\":[\"phoneNumber\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"robert.townes@contoso.com\",\"path\":[\"email\"]},\"_p_website\":{\"ret_btype\":\"text\",\"caption\":\"website\",\"sample_value\":\"\",\"path\":[\"website\"]},\"_p_taxLiable\":{\"ret_btype\":\"boolean\",\"caption\":\"taxLiable\",\"sample_value\":true,\"path\":[\"taxLiable\"]},\"_p_taxAreaId\":{\"ret_btype\":\"text\",\"caption\":\"taxAreaId\",\"sample_value\":\"90196a90-44e3-ea11-bb43-000d3a2feca1\",\"path\":[\"taxAreaId\"]},\"_p_taxAreaDisplayName\":{\"ret_btype\":\"text\",\"caption\":\"taxAreaDisplayName\",\"sample_value\":\"ATLANTA, GA\",\"path\":[\"taxAreaDisplayName\"]},\"_p_taxRegistrationNumber\":{\"ret_btype\":\"text\",\"caption\":\"taxRegistrationNumber\",\"sample_value\":\"\",\"path\":[\"taxRegistrationNumber\"]},\"_p_currencyId\":{\"ret_btype\":\"text\",\"caption\":\"currencyId\",\"sample_value\":\"00000000-0000-0000-0000-000000000000\",\"path\":[\"currencyId\"]},\"_p_currencyCode\":{\"ret_btype\":\"text\",\"caption\":\"currencyCode\",\"sample_value\":\"USD\",\"path\":[\"currencyCode\"]},\"_p_paymentTermsId\":{\"ret_btype\":\"text\",\"caption\":\"paymentTermsId\",\"sample_value\":\"04a5738a-44e3-ea11-bb43-000d3a2feca1\",\"path\":[\"paymentTermsId\"]},\"_p_shipmentMethodId\":{\"ret_btype\":\"text\",\"caption\":\"shipmentMethodId\",\"sample_value\":\"00000000-0000-0000-0000-000000000000\",\"path\":[\"shipmentMethodId\"]},\"_p_paymentMethodId\":{\"ret_btype\":\"text\",\"caption\":\"paymentMethodId\",\"sample_value\":\"3b196a90-44e3-ea11-bb43-000d3a2feca1\",\"path\":[\"paymentMethodId\"]},\"_p_blocked\":{\"ret_btype\":\"text\",\"caption\":\"blocked\",\"sample_value\":\" \",\"path\":[\"blocked\"]},\"_p_lastModifiedDateTime\":{\"ret_btype\":\"text\",\"caption\":\"lastModifiedDateTime\",\"sample_value\":\"2020-08-21T07:38:44.293Z\",\"path\":[\"lastModifiedDateTime\"]}}}}",
+            "url": "https://api.businesscentral.dynamics.com/v2.0/[Environment]/api/v2.0/companies([CompanyID])/customers([CustomerID])",
+            "url_params": {
+                "ABm": {
+                    "doc": "Enter the name of the environment, typically Production or Sandbox",
+                    "key": "Environment",
+                    "private": true,
+                    "value": "Sandbox"
+                },
+                "ABn": {
+                    "doc": "The company ID obtained from the Get Companies call",
+                    "key": "CompanyID",
+                    "private": true,
+                    "value": ""
+                },
+                "ABo": {
+                    "doc": "The customer ID obtained from the Get Customers call",
+                    "key": "CustomerID",
+                    "private": true,
+                    "value": ""
                 }
             },
             "wrap_error": true
