@@ -7,7 +7,7 @@
     },
     "data_tracked": false,
     "demo_page": "https://testpluginbcconnector.bubbleapps.io/version-test",
-    "description": "Bubble plugin to connect with Microsoft Business Central via API.\n\nWith this plugin you will be able to connect Bubble apps to your Microsoft Business Central and access any data published by its standard API.\n\n(At the moment, only read access is possible to companies, customers and its contacts data.\nMore standard web services will be added soon)",
+    "description": "Bubble plugin to connect with Microsoft Business Central via API.\n\nWith this plugin you will be able to connect Bubble apps to your Microsoft Business Central and access any data published by its standard API.\n\nCurrently, read access is possible to companies, customers, their accounts receivable and their contact data. It is also possible to modify a customer.\n\n(More standard web services will be added soon)",
     "image": "//meta-q.cdn.bubble.io/f1727955298035x387384841172376100/Business%20Central.png",
     "license": "open_source",
     "link": "https://joseppages.notion.site/Microsoft-Business-Central-Connector-11523005c79c80238a77d96ed45577ec?pvs=4",

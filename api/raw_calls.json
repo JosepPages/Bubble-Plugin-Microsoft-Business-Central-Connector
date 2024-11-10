@@ -10,17 +10,46 @@
                     "private": true,
                     "value": "Bearer "
                 },
-                "ABP": {
-                    "doc": "Set a different value on each call to force Bubble not to read from the cache",
-                    "key": "DateTimeForRefresh",
-                    "optional": true,
+                "ACS": {
+                    "key": "Connection",
                     "private": true,
-                    "value": ""
+                    "value": "keep-alive",
+                    "visibility": "hidden"
+                },
+                "ACW": {
+                    "key": "Cache-Control",
+                    "optional": false,
+                    "private": true,
+                    "value": "no-cache",
+                    "visibility": "hidden"
                 }
             },
             "initialized": true,
             "method": "get",
             "name": "Get Companies",
+            "params": {
+                "ACb": {
+                    "doc": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/webservices/use-filter-expressions-in-odata-uris",
+                    "key": "$filter",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ACc": {
+                    "doc": "Type the field names you want to order by separated by commas.",
+                    "key": "$orderby",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ACd": {
+                    "doc": "Set currentdatetime to force cache not to be read",
+                    "key": "ForceNotCache",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
             "publish_as": "data",
             "rank": 2,
             "ret_value": "api.1727941107544x715465314016952300.plugin_api.AAL",
@@ -133,12 +162,18 @@
                     "private": true,
                     "value": "Bearer "
                 },
-                "ABN": {
-                    "doc": "Set a different value on each call to force Bubble not to read from the cache",
-                    "key": "DateTimeForRefresh",
-                    "optional": true,
+                "ACT": {
+                    "key": "Connection",
                     "private": true,
-                    "value": ""
+                    "value": "keep-alive",
+                    "visibility": "hidden"
+                },
+                "ACX": {
+                    "key": "Cache-Control",
+                    "optional": false,
+                    "private": true,
+                    "value": " no-cache",
+                    "visibility": "hidden"
                 }
             },
             "initialized": true,
@@ -155,6 +190,13 @@
                 "ABY": {
                     "doc": "Type the field names you want to order by separated by commas.",
                     "key": "$orderby",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ACe": {
+                    "doc": "Set currentdatetime to force cache not to be read",
+                    "key": "ForceNotCache",
                     "optional": true,
                     "private": true,
                     "value": ""
@@ -189,12 +231,18 @@
                     "private": true,
                     "value": "Bearer "
                 },
-                "ABU": {
-                    "doc": "Set a different value on each call to force Bubble not to read from the cache",
-                    "key": "DateTimeForRefresh",
-                    "optional": true,
+                "ACU": {
+                    "key": "Connection",
                     "private": true,
-                    "value": ""
+                    "value": "keep-alive",
+                    "visibility": "hidden"
+                },
+                "ACY": {
+                    "key": "Cache-Control",
+                    "optional": false,
+                    "private": true,
+                    "value": "no-cache",
+                    "visibility": "hidden"
                 }
             },
             "initialized": true,
@@ -211,6 +259,13 @@
                 "ABW": {
                     "doc": "Type the field names you want to order by separated by commas.",
                     "key": "$orderby",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ACf": {
+                    "doc": "Set currentdatetime to force cache not to be read",
+                    "key": "ForceNotCache",
                     "optional": true,
                     "private": true,
                     "value": ""
@@ -251,12 +306,18 @@
                     "private": true,
                     "value": "Bearer "
                 },
-                "ABf": {
-                    "doc": "Set a different value on each call to force Bubble not to read from the cache",
-                    "key": "DateTimeForRefresh",
-                    "optional": true,
+                "ACV": {
+                    "key": "Connection",
                     "private": true,
-                    "value": ""
+                    "value": "keep-alive",
+                    "visibility": "hidden"
+                },
+                "ACZ": {
+                    "key": "Cache-Control",
+                    "optional": false,
+                    "private": true,
+                    "value": "no-cache",
+                    "visibility": "hidden"
                 }
             },
             "initialized": true,
@@ -266,6 +327,13 @@
                 "ABi": {
                     "doc": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/webservices/use-filter-expressions-in-odata-uris",
                     "key": "$filter",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ACg": {
+                    "doc": "Set currentdatetime to force cache not to be read",
+                    "key": "ForceNotCache",
                     "optional": true,
                     "private": true,
                     "value": ""
